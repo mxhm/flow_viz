@@ -1,6 +1,8 @@
 # flow_viz
 Interactive cytometry visualisation
 
+![flowviz screenshot](flowviz.png)
+
 ## installation
 
 clone this app with git:
@@ -9,7 +11,7 @@ clone this app with git:
 git clone git@github.com:obi-ds/flow_viz.git
 ```
 
-download and install [RStudio]('https://www.rstudio.com/products/rstudio/download/') and [R](https://cloud.r-project.org)
+download and install [RStudio](https://www.rstudio.com/products/rstudio/download/) and [R](https://cloud.r-project.org)
 
 ```R
 
@@ -35,3 +37,5 @@ library(reticulate)
 py_install(c('pacmap', 'umap-learn', 'trimap', 'scikit-learn'), pip=TRUE) 
 
 ```
+
+
