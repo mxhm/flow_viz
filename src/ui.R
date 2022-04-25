@@ -1,7 +1,6 @@
 library(shiny)
 library(shinyWidgets)
 library(threejs)
-library(paletteer)
 
 
 shinyUI(fluidPage(
@@ -54,6 +53,8 @@ shinyUI(fluidPage(
             checkboxInput("subsample", "subsample", FALSE),
             
             actionButton("button_plot", "Plot"),
+            
+            sliderInput('pointsize', 'Size', min=0.001, max=0.1, value = 0.001),
             
             selectizeInput("channels_project", "Project channels:",
                            NULL, multiple = TRUE),

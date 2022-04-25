@@ -1,16 +1,6 @@
 # Maximum size = 30MB for uploaded files
 options(shiny.maxRequestSize = 100 * 1024 ^ 2)
 
-# install dev version
-#if(!require("devtools")) install.packages("devtools")
-#devtools::install_github("bwlewis/rthreejs")
-
-#devtools::install_github("EmilHvitfeldt/paletteer")
-
-#if (!require("BiocManager", quietly = TRUE))
-#    install.packages("BiocManager")
-# BiocManager::install("flowCore")
-
 # Load libraries
 library(shiny)
 library(flowCore)
@@ -18,12 +8,12 @@ library(tidyr)
 library(threejs)
 library(RColorBrewer)
 library(scales)
-library(viridisLite)
+#library(viridisLite)
 library(paletteknife)
 library(data.table)
 
-library(tsne)
-library(umap)
+#library(tsne)
+#library(umap)
 
 library(reticulate)
 
@@ -122,7 +112,8 @@ shinyServer(function(input, output, session) {
         scatterplot3js(
             x = x,
             #axisLabels = c(input$channels[1], input$channels[3], input$channels[2]),
-            size = 0.01,
+            #size = 0.01,
+            size = input$pointsize,
             color = color,
             stroke = 0.00001,
             grid = FALSE,
